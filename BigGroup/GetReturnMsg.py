@@ -20,7 +20,7 @@ def get_return_msg(msg):
     ##################################   发送的消息是名片
     elif msg['Type'] == 'Card':
         # 微信个人名片
-        if (msg['RecommendInfo']['VerifyFlag'] == 0):
+        if  msg['RecommendInfo']['VerifyFlag'] == 0 :
             msg_content += "【微信名片】" + msg['RecommendInfo']['NickName'] + '，微信号为 ' + XmlParse.get_wechat_code(1, msg[
                 'Content'])
         else:
@@ -33,13 +33,13 @@ def get_return_msg(msg):
     ##################################   分享消息
     elif msg['Type'] == 'Sharing':
         # 分享酷狗音乐
-        if (msg['AppMsgType'] == 36):
+        if  msg['AppMsgType'] == 36 :
             msg_content += "【歌曲分享】" + msg['Text']
         # 发送小程序
-        elif (msg['AppMsgType'] == 33):
+        elif  msg['AppMsgType'] == 33 :
             msg_content += "【小程序分享】" + msg['Text']
         # 发送文章链接
-        elif (msg['AppMsgType'] == 5):
+        elif  msg['AppMsgType'] == 5 :
             msg_content += "【文章分享】" + msg['Text'] + "；链接" + msg['Url']
         else:
             msg_content += "【未知的分享】"
