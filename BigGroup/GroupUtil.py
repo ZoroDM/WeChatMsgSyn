@@ -1,4 +1,3 @@
-
 def get_groups_name(groups):
     result = []
     for group in groups:

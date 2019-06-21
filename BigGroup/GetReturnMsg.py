@@ -1,6 +1,5 @@
 import XmlParse
 
-
 # 根据接收到的群消息，重新组合消息内容
 def get_return_msg(msg):
     # 储存发送人的群里备注名字
