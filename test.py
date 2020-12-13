@@ -1,7 +1,8 @@
 import math
+import sys
 
 # 客户兑换总积分
-totalPoint = 5800000
+totalPoint = int(sys.stdin.readline())
 # 计算值和预期值的差值，初始化默认为totalPoint
 gap = totalPoint
 # 上浮、下浮的范围
